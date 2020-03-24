@@ -1,0 +1,8 @@
+{
+  "appId": "sclass.ionic.beta",
+  "appName": "Sclass",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "src",
+  "cordova": {}
+}
