@@ -13,7 +13,7 @@ export class authService {
   loginUser(
     email: string,
     password: string,
-  ): Promise<firebase.auth.UserCredential> {
+  ): Promise<any> {
     return firebase.auth().signInWithEmailAndPassword(email, password);
   }
 

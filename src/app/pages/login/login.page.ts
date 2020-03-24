@@ -18,18 +18,21 @@ export class LoginPage implements OnInit {
 
  
 
-  firebaseAuthentication: any;
-  authService: any;
+
+
   constructor(
-    public navCtrl: NavController,
-    private auth: authService,
-    private router: Router,
-    private alertCtrl: AlertController) { }
+
+    private authService: authService,
+  private alertCtrl: AlertController,
+  private router: Router,
+  
+  ) { }
 
   ngOnInit() {
   }
-  async loginUser(credentials: { email: any; password: any; }): Promise<void> {
-    this.authService.loginUser(credentials.email, credentials.password).then(
+  async loginUser(email: string, password: string): Promise<void> {
+
+    this.authService.loginUser(email, password).then(
       () => {
         this.router.navigateByUrl('home');
       },

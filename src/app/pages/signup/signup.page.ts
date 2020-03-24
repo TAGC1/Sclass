@@ -21,11 +21,10 @@ export class SignupPage implements OnInit {
   ngOnInit() {
   }
 
-  async signupUser(email: string, password: string): Promise<void> {
-    
+  async signupUser(email: string, password: string): Promise<void> { 
     this.authService.signupUser(email, password).then(
       () => {
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('pages/feed');
       },
       async error => {
         const alert = await this.alertCtrl.create({
